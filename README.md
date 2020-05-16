@@ -24,8 +24,8 @@ the application up and running, you must do the following:
   the running application
 
 The application is now ready to use! If you would like to view a guide
-describing how to use the tool, please see the userGuide.pdf file located in
-the documentation folder.
+describing how to use the application, please see the userGuide.pdf file
+located in the documentation folder.
 
 # Application Demo
 A demo video of the Class Grade Calculator can be seen here:
