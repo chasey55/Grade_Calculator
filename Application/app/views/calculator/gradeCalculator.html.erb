@@ -33,7 +33,7 @@
         <% end %>
 <div class="calcDiv">
 <%= form_for([@user, User.find(session[:user_id]).grades.build], :class=>"studentInfo", :name=>"gradeInfo") do |form| %>
-  
+
   <div id="leftSide">
     <div id="assignments">
       <p class="columnTitle">Assignment</p>
@@ -84,7 +84,7 @@
         <%= link_to 'Show Previous Log', calculator_gradeTable_path, :class=>"showLogButton" %>
       </div>
     </div>
-     <div id="resultsDiv rightSide">
+     <div id="resultsDiv">
         <p id="resultsTitle">Results</p>
         <p>Your calculated final grade is  <strong><%= form.label :result, :id=>"gradeResult" %></strong></p>
         <%= hidden_field(:grade, :result, :id=>"hidden_result") %>

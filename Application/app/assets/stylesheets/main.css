@@ -49,6 +49,7 @@
         font-family: "Source Sans Pro", helvetica, arial, sans-serif;
         font-size: 30px;
     }
+
 }
 
 /* styling for description paragraphs */
@@ -182,14 +183,22 @@ body {
 
 .calcDiv {
     text-align: center;
-
     margin-top: -10px;
 }
 
-#assignments {
-    display: inline-block;
-    float: left;
-    width: 150px;
+
+@media screen and (min-width: 531px) {
+    #assignments {
+        display: inline-block;
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    #assignments {
+        display: block;
+        text-align: center;
+    }
 }
 
 #assignments input {
@@ -205,17 +214,17 @@ body {
     margin-right: auto;
 }
 
-@media screen and (min-width: 751px) {
+@media screen and (min-width: 531px) {
     #grades {
         display: inline-block;
         width: 150px;
     }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 530px) {
     #grades {
         display: block;
-        width: 150px;
+        text-align: center;
     }
 }
 
@@ -232,19 +241,34 @@ body {
     margin-right: auto;
 }
 
-@media screen and (min-width: 751px) {
+@media screen and (min-width: 531px) {
     #weights {
         display: inline-block;
         width: 150px;
     }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 530px) {
     #weights {
         display: block;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 804px) {
+    #results {
+        display: inline-block;
         width: 150px;
     }
 }
+
+@media screen and (max-width: 530px) {
+    #results {
+        display: block;
+        text-align: center;
+    }
+}
+
 
 #weights input {
     width: 75px;
@@ -264,23 +288,16 @@ body {
     text-shadow: 1px 1px 2px #000000;
 }
 
-@media screen and (min-width: 751px) {
-    #buttonDiv {
-        padding-top: 13px;
-        float: left;
-    }
+
+#buttonDiv {
+    padding-top: 13px;
 }
 
-@media screen and (max-width: 750px) {
-    #buttonDiv {
-        clear: both;
-        padding-top: 13px;
-    }
-}
 
 #resultsDiv {
     text-align: center;
     display: inline-block;
+    width: 100%;
 }
 
 #resultsTitle {
@@ -294,13 +311,13 @@ body {
     font-size: 20px;
 }
 
+
 #leftSide {
-    float: left;
-    width: 55%;
+    width: 100%;
 }
 
+
 #leftSideTable {
-    float: left;
     width: 100%;
     padding-top: 30px;
 }
@@ -335,6 +352,18 @@ body {
     width: 80px;
     text-decoration: none;
     -webkit-appearance: none;
+}
+
+@media screen and (max-width: 475px) {
+    .showLogButton {
+        padding-top: 13px;
+        width: 40%;
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+    }
 }
 
 /* styling for submit button on hover */
@@ -395,4 +424,15 @@ a.backButton {
     position: relative;
     top: 30px;
     -webkit-appearance: none;
+}
+
+
+@media screen and (max-width: 530px) {
+    a.backButton {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-bottom: 20px;
+    }
 }
