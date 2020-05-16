@@ -7,8 +7,9 @@ the application up and running, you must do the following:
 
 - create an AWS Cloud 9 EC2 instance environment (you can leave all options on
   the default setting)
-- open a terminal and run the following commands to make sure you are using the
-  correct versions of Ruby and Rails:
+- open a terminal, clone the repository and run a few commands to make
+  sure you are using the correct versions of Ruby and Rails. The commands
+  needed to do this are as follows:
     1. git clone https://github.com/chasey55/Grade_Calculator
     2. cd Grade_Calculator/Application
     3. rvm install ruby-2.4.1 (this will take about a minute)
@@ -25,6 +26,9 @@ the application up and running, you must do the following:
 The application is now ready to use! A demo video of the Class Grade calculator
 can be seen here: https://youtu.be/zFsvict7yTM?t=66
 
+If you would like to view a guide describing how to use the tool, please see
+the userGuide.pdf file located in the documentation folder.
+
 
 How to run the test suite:
 
@@ -32,3 +36,5 @@ How to run the test suite:
   "cd Grade_Calculator/Application"
 - To run the rspec tests, type "rspec" in the terminal
 - To run the cucumber tests, type "cucumber" in the terminal
+To view more information on the tests being ran, please see the testsExplanation.pdf
+file located in the documentation folder.
