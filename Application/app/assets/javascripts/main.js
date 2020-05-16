@@ -7,8 +7,8 @@ var assignment1Result = assignment2Result = assignment3Result = assignment4Resul
 
 // make sure vars are valid, and calculate
 function validate() {
-        
-    // get the values of all inputs    
+
+    // get the values of all inputs
     var grade1Input = document.getElementById("gradeNum1").value;
     var grade2Input = document.getElementById("gradeNum2").value;
     var grade3Input = document.getElementById("gradeNum3").value;
@@ -30,7 +30,7 @@ function validate() {
     var weight8Input = document.getElementById("weight8").value;
     var weight9Input = document.getElementById("weight9").value;
     var weight10Input = document.getElementById("weight10").value;
-    
+
     // turn the weights into decimals
     weight1Input = weight1Input / 100;
     weight2Input = weight2Input / 100;
@@ -66,19 +66,22 @@ function validate() {
         // if the grade is not equal to one, divide by the current total weight
         var finalGrade = (assignment1Result + assignment2Result + assignment3Result + assignment4Result + assignment5Result + assignment6Result + assignment7Result + assignment8Result + assignment9Result + assignment10Result) / weightTotal;
     }
-    
+
     // OUTPUT the final grade and combined weight
-   
+
     var gradeResult = finalGrade.toFixed(3);
+    console.log(gradeResult);
     var combinedWeight = (weightTotal*100).toFixed(0);
-    
-    document.getElementById("gradeResult").innerText = gradeResult;
-    document.getElementById("combinedWeight").innerText = combinedWeight;
-    document.getElementById("hidden_result").value = gradeResult;
-    document.getElementById("hidden_weightAvg").value = combinedWeight;
+
+    // check if the grade result is not a number
+    if (gradeResult === "NaN") {
+        // if it is not a number, print an error message and refresh the page
+        alert("Invalid input. Please make sure to fill out all 3 columns for each row.");
+        location.reload();
+    } else {
+        document.getElementById("gradeResult").innerText = gradeResult;
+        document.getElementById("combinedWeight").innerText = combinedWeight;
+        document.getElementById("hidden_result").value = gradeResult;
+        document.getElementById("hidden_weightAvg").value = combinedWeight;
+    }
 }
-
-
-
-
-
